@@ -40,12 +40,12 @@ window.addEventListener("load", () => {
             firebase
               .database()
               .ref("UserAds/" + usersUidArr[key])
-              .once("value", data1 => {
-                var allUserAds = data1.val();
+              .once("value", data => {
+                var allUserAds = data.val();
                 for (var key2 in allUserAds) {
                   for (var key3 in wishListKeys) {
-                    // console.log(key2)
-                    // console.log(wishListKeys[key3])
+                     console.log(key2)
+                     console.log(wishListKeys[key3])
                     if (key2 === wishListKeys[key3]) {
                       console.log(key2);
                       console.log(wishListKeys[key3]);
